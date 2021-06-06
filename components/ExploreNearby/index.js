@@ -5,7 +5,6 @@ import Link from "next/link";
 export default function index() {
     return (
         <div className="mt-40 lg:mt-64 sm:px-10">
-            {/* grid gap-3 grid-cols-2 grid-flow-col grid-rows-2  */}
             <h1 className="text-3xl font-bold leading-10">Explore nearby</h1>
             <ul className="w-full mt-5 grid gap-3 editscrollbar grid-cols-13 md:grid-cols-3 grid-flow-col grid-rows-2 overflow-x-auto overflow-y-hidden scroll-snap-x">
                 {locations.map((state, index) => {
@@ -67,13 +66,3 @@ export default function index() {
         </div>
     );
 }
-
-// <ul className="editscrollbar w-full grid grid-flow-col gap-3 mb:grid-cols-none mb:flex mb:justify-between overflow-x-auto overflow-y-hidden scroll-snap-x">
-// {locations.map((state, index) => {
-//     return (
-//         <li key={index}>
-//             <img src={state.picture}></img>
-//         </li>
-//     );
-// })}
-// </ul>

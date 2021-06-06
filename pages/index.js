@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import Ads from "../components/Ads";
 import About from "../components/About";
 import Navbar from "../components/Navbar";

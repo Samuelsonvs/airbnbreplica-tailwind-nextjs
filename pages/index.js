@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 import BackgroundImg from "../components/BackgroundImg";
 import SearchBar from "../components/SearchBar";
 import AirbnbIntroducing from "../components/AirbnbIntroducing";
-import ExploreNearby from "../components/Explorenearby";
+import ExploreNearby from "../components/ExploreNearby";
 import LiveAnywhere from "../components/LiveAnywhere";
 import TheGreatest from "../components/TheGreatest";
 import DiscoverExperiences from "../components/DiscoverExperiences";

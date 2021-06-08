@@ -12,8 +12,21 @@ import DiscoverExperiences from "../components/DiscoverExperiences";
 import BecomeHost from "../components/BecomeHost";
 import InspirationFuture from "../components/InspirationFuture";
 import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+    const [colorChange, setColorchange] = useState(false);
+
+    useEffect(() => {
+        const changeNavbarColor = () => {
+            if (window.scrollY >= 50) {
+                setColorchange(true);
+            } else {
+                setColorchange(false);
+            }
+        };
+        window.addEventListener("scroll", changeNavbarColor);
+    }, []);
     return (
         <div>
             <Head>
@@ -24,17 +37,18 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="max-w-screen-3xl overflow-x-hidden h-screen relative">
+            <div className="max-w-screen-3xl h-screen relative">
+                {" "}
+                {/*overflow-x-hidden*/}
                 <div>
                     <div>
                         <Ads />
                         <BackgroundImg />
-                        <Navbar />
-                        <SearchBar />
-                        <AirbnbIntroducing />
+                        <Navbar colorChange={colorChange} />
+                        <SearchBar visibility={colorChange} />
+                        <AirbnbIntroducing visibility={colorChange} />
                     </div>
                 </div>
-
                 <main className="relative z-20 mt-40">
                     <About />
                     <ExploreNearby />

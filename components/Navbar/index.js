@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import styles from "./index.module.css";
 
-export default function index() {
+export default function index({ colorChange }) {
     return (
-        <header className={`${styles.grad} h-20 w-full relative z-20`}>
+        <header
+            className={`${
+                colorChange ? "fixed top-0 bg-white" : `relative ${styles.grad}`
+            } h-20 w-full z-50 transition-colors`}
+        >
             <div className="block md:hidden pt-4 px-6">
-                <div className="h-11 w-full pt-3 bg-white rounded-3xl">
+                <div className="h-11 w-full shadow-lg pt-3 bg-white rounded-3xl">
                     <label className="w-full block pl-5">
                         <div className="inline">
                             <button
@@ -46,7 +50,11 @@ export default function index() {
                 </div>
             </div>
             <div className="items-center justify-between h-full px-10 lg:px-20 hidden md:flex">
-                <div className="w-32 z-20 text-white">
+                <div
+                    className={`w-32 z-20 ${
+                        colorChange ? "text-black" : "text-white"
+                    }`}
+                >
                     <Link href="#">
                         <a>
                             <div className="hidden lg:block">
@@ -72,7 +80,36 @@ export default function index() {
                         </a>
                     </Link>
                 </div>
-                <div className="z-20 text-white hidden lg:block font-semibold text-sm">
+                <div
+                    className={`${
+                        colorChange ? "inline" : "hidden"
+                    } border border-gray-300 shadow-2xl rounded-3xl`}
+                >
+                    <button className="w-72 focus:outline-none py-3 flex justify-between px-5">
+                        <div className="text-sm font-semibold">
+                            Start your search
+                        </div>
+                        <div className=" rounded-full h-full bg-red-400 p-3 -m-2">
+                            <svg
+                                className="block h-3 w-3 stroke-current stroke-4 overflow-visible"
+                                viewBox="0 0 32 32"
+                                xmlns="http://www.w3.org/2000/svg"
+                                aria-hidden="true"
+                                role="presentation"
+                                focusable="false"
+                            >
+                                <g fill="none">
+                                    <path d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"></path>
+                                </g>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+                <div
+                    className={`z-20 text-white ${
+                        colorChange ? "hidden" : "hidden lg:block"
+                    } font-semibold text-sm`}
+                >
                     <ul>
                         <li className="bottom-effect inline mr-4 px-3 py-4">
                             <Link href="#">
@@ -91,7 +128,11 @@ export default function index() {
                         </li>
                     </ul>
                 </div>
-                <div className="z-20 text-white">
+                <div
+                    className={`z-20 ${
+                        colorChange ? "text-black" : "text-white"
+                    }`}
+                >
                     <ul>
                         <li className="inline p-3 font-semibold text-sm cursor-pointer rounded-3xl hover:bg-gray-100 hover:bg-opacity-20">
                             <Link href="#">

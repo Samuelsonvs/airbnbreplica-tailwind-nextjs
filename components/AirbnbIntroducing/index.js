@@ -1,9 +1,13 @@
 import React from "react";
 import Link from "next/link";
 
-export default function index() {
+export default function index({ visibility }) {
     return (
-        <div className="max-w-mp lg:max-w-md relative z-20 mt-40 ml-10">
+        <div
+            className={`max-w-mp lg:max-w-md relative z-20 ${
+                visibility ? "mt-72" : "mt-40"
+            } ml-10`}
+        >
             <div
                 className="h-auto w-auto bg-cover"
                 role="img"
@@ -30,7 +34,7 @@ export default function index() {
             </div>
             <div>
                 <span className="text-3xl lg:text-5xl font-semibold leading-9 lg:leading-12">
-                    Untroducing 100+ upgrades across our entire&nbsp;service
+                    Introducing 100+ upgrades across our entire&nbsp;service
                 </span>
             </div>
             <div className="pt-3">

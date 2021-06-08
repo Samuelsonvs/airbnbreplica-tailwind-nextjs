@@ -1,9 +1,13 @@
 import React from "react";
 import Link from "next/link";
 
-export default function index() {
+export default function index({ visibility }) {
     return (
-        <div className="max-w-4xl mx-auto hidden md:block">
+        <div
+            className={
+                visibility ? "hidden" : "max-w-4xl mx-auto hidden md:block"
+            }
+        >
             <div className="z-20 text-white block relative lg:hidden font-semibold text-sm">
                 <ul className="flex justify-center">
                     <li className="bottom-effect inline mr-4 px-3 py-4">

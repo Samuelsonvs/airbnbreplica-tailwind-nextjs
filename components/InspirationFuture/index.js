@@ -31,7 +31,7 @@ export default function index() {
                                 <button
                                     id={state._id}
                                     onClick={clickHandler}
-                                    className={`focus:outline-none py-5 ${
+                                    className={`focus:outline-none py-5 transition duration-100 ease transform active:scale-95 ${
                                         bool[index]
                                             ? "border-b-2 border-black"
                                             : ""

@@ -91,7 +91,7 @@ export default function index({ colorChange }) {
                         </div>
                         <div className=" rounded-full h-full bg-red-400 p-3 -m-2">
                             <svg
-                                className="block h-3 w-3 stroke-current stroke-4 overflow-visible"
+                                className="block h-3 w-3 text-white stroke-current stroke-4 overflow-visible"
                                 viewBox="0 0 32 32"
                                 xmlns="http://www.w3.org/2000/svg"
                                 aria-hidden="true"

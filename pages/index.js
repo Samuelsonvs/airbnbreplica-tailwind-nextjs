@@ -26,6 +26,7 @@ export default function Home() {
             }
         };
         window.addEventListener("scroll", changeNavbarColor);
+        return () => removeEventListener(changeNavbarColor);
     }, []);
     return (
         <div>

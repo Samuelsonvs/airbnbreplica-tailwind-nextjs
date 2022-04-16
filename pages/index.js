@@ -38,7 +38,7 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className="max-w-screen-3xl h-screen relative">
+            <div className="max-w-screen-3xl h-screen relative mx-auto">
                 {" "}
                 {/*overflow-x-hidden*/}
                 <div>
